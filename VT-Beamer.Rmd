@@ -1,0 +1,153 @@
+---
+title: "Virginia Tech Beamer Presentation"
+author: Preston Childress
+subtitle: "Some other text"
+date: "`r format(Sys.time(), '%B %d, %Y')`" # This automatically sets date to today
+institution: "Virginia Tech"
+
+
+output:
+  beamer_presentation:
+    incremental: no #Don't make new slides for each bullet point
+    toc: no #No table of contents slide
+    theme: Hokie
+    latex_engine: pdflatex 
+    slide_level: 2 # This makes double hashes slides, single hashes section titles
+
+        
+classoption: aspectratio=169 #Force widescreen
+urlcolor: blue # urlcolor makes external hyperlinks blue as people expect
+linkcolor: white # Ensure that the navigation dots are white for contrast
+header-includes: \AtBeginSection{} # Turn off section header slides.
+
+
+bibliography: "citations.bib" # This is the name of your citations file. An easy way to
+                              # build a citations file is Zotero: https://zbib.org/
+                              
+biblio-style: "apa.csl" # This is the APA citation style file, there are a LOT available:
+                        # https://github.com/citation-style-language/styles
+                        
+# nocite lets you include references from the .bib file without explicitly referring 
+# to them in the presentation body. References here MUST match whats in the .bib file.
+nocite: "@rmdGuide, @ggplotBg, @rTheme, @rCodeFont, @rCrime"
+---
+
+```{r setup, include=FALSE}
+# comment = NA turns off double hash marks on code outputs 
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, comment = NA, dev = 'pdf')
+options(width = 120) # Make output wider so more code fits on a widescreen slide.
+
+
+# This uses a 'size' option in knitr chunks and will change output size. eg {r size="tiny"}
+def.chunk.hook  <- knitr::knit_hooks$get("chunk")
+knitr::knit_hooks$set(chunk = function(x, options) {
+  x <- def.chunk.hook(x, options)
+  ifelse(options$size != "normalsize", paste0("\n \\", options$size,"\n\n", x, "\n\n \\normalsize"), x)
+})
+
+
+library(ggplot2)
+# Transparent background for ggplot helps avoid overlapping the VT logo
+theme_update(plot.background = element_rect(fill = "transparent",colour = NA))
+
+
+# Other libraries can be imported here. 
+
+
+```
+
+
+# Intro
+
+## General Stuff
+
+- You can make lists
+
+  - Sub-items are indented
+  
+    - So are sub-sub-items
+    
+- And you can do in-line LaTeX: $e^{i\pi} + 1 = 0$
+
+- Or in-line R syntax: `mean(mtcars$mpg)`
+
+- LaTeX blocks are also supported:
+
+$$ \overset{n}{\underset{i=1}{\sum}} \phi_i \frac{\mathbf{u}_i^\intercal \mathbf{b}}{\sigma_i} \mathbf{v}_i $$
+
+# Code Section
+
+## Code Example
+
+- Code outputs with normal font size can use up vertical space quickly
+
+```{r}
+# This output is normalsize and takes up space
+head(mtcars)
+```
+
+## Smaller Code
+
+- The `size` parameter can be used to change code and output size
+
+- It accepts standard LaTeX sizes: 
+
+  - Huge > huge > LARGE > Large > large > normalsize > small > footnotesize > scriptsize > tiny
+
+\footnotesize
+```{r, size="footnotesize"}
+# This output is footnotesize and takes up less space
+head(mtcars)
+```
+
+## Plot Example
+
+- Use `fig.width / fig.height` to scale plots
+
+```{r fig.width = 6, fig.height = 2.25, size="footnotesize"}
+# Code with {r fig.width = 6, fig.height = 2.25}
+qplot(x = mtcars$wt, y = mtcars$mpg)
+```
+
+## Handling Overflow {.allowframebreaks}
+
+- Sometimes code output will be too long for a single slide
+
+- Adding `{.allowframebreaks}` to the title of a slide lets it overflow onto a second slide
+
+- For this slide the header is `## Handling Overflow {.allowframebreaks}`
+
+```{r size="footnotesize"}
+# Intentionally long output
+head(mtcars, 18)
+```
+
+- Output is continued to the second slide automatically
+
+- The slide title automatically incremented
+
+- The navigation dot does not advance
+
+
+
+
+# References
+
+## About References
+
+- The References slide is created from a BibTeX `(.bib)` file declared at the top of this file
+
+- Citation style is defined from a `.csl` file also declared at the top of this file
+
+- Use `nocite` to include a citation in the bibliography without referencing it directly
+
+- References can be cited in the presentation with `@referenceName` eg `@ggplotBg`: @ggplotBg
+
+- Zotero is a good tool for building citation files: https://zbib.org/
+
+- There are 1400+ citation style files available: https://github.com/citation-style-language/styles
+
+- `{.allowframebreaks}` can be useful if there are many citations
+
+## References
+\footnotesize

@@ -1,0 +1,190 @@
+\mode<presentation>
+
+% Define colors, as described by University Relation's Web Palette Guidelines
+%
+% Most colors are described in four levels: 'light', 'normal', 'dark', and
+% 'deep', in that order, where 'light' is the lightest, and 'deep' is the
+% darkest. This is not the case for a few special colors, e.g., maroon, orange,
+% and bgbrown.
+
+% Primary colors
+\definecolor{maroon}{RGB}{102, 0, 0}
+\definecolor{orange}{RGB}{255, 102, 0}
+
+% Complementary colors - blues
+\definecolor{lightblue}{RGB}{147, 167, 179}
+\definecolor{blue}{RGB}{85, 112, 130}
+\definecolor{darkblue}{RGB}{60, 91, 111}
+\definecolor{deepblue}{RGB}{18, 37, 44}
+
+% Complementary colors - reds
+\definecolor{lightred}{RGB}{152, 0, 0}
+\definecolor{red}{RGB}{122, 0, 0}
+\definecolor{darkred}{RGB}{92, 0, 0}
+\definecolor{deepred}{RGB}{76, 0, 0}
+
+% Complementary colors - greens
+\definecolor{lightgreen}{RGB}{152, 182, 143}
+\definecolor{green}{RGB}{121, 148, 108}
+\definecolor{darkgreen}{RGB}{81, 111, 67}
+\definecolor{deepgreen}{RGB}{48, 80, 32}
+
+% Complementary colors - golds
+\definecolor{lightgold}{RGB}{180, 122, 31}
+\definecolor{gold}{RGB}{168, 97, 7}
+\definecolor{darkgold}{RGB}{140, 82 ,6}
+\definecolor{deepgold}{RGB}{153, 51, 0}
+
+% Complementary colors - creams and browns
+\definecolor{lightcream}{RGB}{245, 245, 235}
+\definecolor{cream}{RGB}{237, 234, 218}
+\definecolor{lightbrown}{RGB}{219, 216, 188}
+\definecolor{brown}{RGB}{157, 152, 121}
+
+% This is the cream-brown used for all of VT's web pages. Bizarrely, it isn't
+% actually included in the VT color palette - found it in the VT CSS sheets.
+\definecolor{bgbrown}{RGB}{218, 215, 183}
+
+% Also not in the web palette, but hidden in the CSS, is the background color
+% for active navigation pages.
+\definecolor{bgactivenav}{RGB}{251, 249, 238}
+
+% Complementary colors - grays
+\definecolor{lightgray}{RGB}{194, 193, 186}
+\definecolor{gray}{RGB}{100, 100, 100}
+\definecolor{darkgray}{RGB}{64, 64, 57}
+\definecolor{deepgray}{RGB}{51, 51, 51}
+
+%This is going to define the new colour scheme, with names!
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Primaries
+
+% Chicago maroon is the first of the two primary brand colors for Virginia
+% Tech. In most cases, this color will be present in your design. Its
+% prominence will be determined by the mood of the piece you are creating, with
+% more formal pieces leaning on the color more heavily.
+\definecolor{chicagoMaroon}{RGB}{139, 31, 65} %this is closer to chicago maroon! thank god!
+
+% Burnt orange is the second primary brand color for Virginia Tech. It should
+% be used as a primary or supplementary color. When we need to use burnt orange
+% on the web for text, the secondary burnt orange web color should be used to
+% meet web accessibility standards.
+\definecolor{burntOrangeWeb}{RGB}{255, 102, 0} %this is the old orange
+\definecolor{burntOrangeRaw}{cmyk}{0, 0.65, 0.9, 0}
+\definecolor{burntOrangeRawRGB}{RGB}{255, 89, 25}
+
+% Yardline white is critical in maintaining the sophistication of the Virginia
+% Tech brand. It should play a significant role in your design palette.
+\definecolor{yardlineWhite}{RGB}{255, 255, 255} %yup, it's just white!
+
+% Hokie Stone is our primary text color and should be used for all text
+% applications on light backgrounds.
+\definecolor{hokieStone}{RGB}{109, 106, 117} %this is way too light ot be a text colour
+
+% Secondary Colours
+
+\definecolor{pylonPurple}{RGB}{128, 32, 100}
+\definecolor{boundlessPink}{RGB}{214, 26, 94}
+\definecolor{virginiaSunset}{RGB}{247, 144, 30}
+\definecolor{triumphantYellow}{RGB}{228, 253, 61}
+\definecolor{sustainableTeal}{RGB}{63, 120, 125}
+\definecolor{vibrantTurquoise}{RGB}{40, 190, 196}
+\definecolor{landgrantGrey}{RGB}{215, 210, 203}
+\definecolor{skipperSmoke}{RGB}{250, 244, 243}
+
+% accent colours
+% all of these were pulled from the CSS for the branding guide page; must be
+% canonical, right?
+
+% greys
+\definecolor{grey0}{RGB}{191, 189, 193}
+\definecolor{grey1}{RGB}{153, 153, 153}
+\definecolor{grey2}{RGB}{119, 119, 119}
+\definecolor{grey3}{RGB}{85, 85, 85}
+\definecolor{grey4}{RGB}{51, 51, 51}
+\definecolor{grey5}{RGB}{46, 40, 42}
+
+% red-ish?
+\definecolor{red0}{RGB}{216,0,0}
+
+% blues
+\definecolor{blue0}{RGB}{85, 112, 130}
+
+\setbeamercolor{normal text}{fg=hokieStone}
+\setbeamercolor{alerted text}{fg=orange}
+\setbeamercolor{background canvas}{bg=yardlineWhite}
+
+\setbeamercolor*{palette primary}{fg=virginiaSunset,bg=skipperSmoke}
+\setbeamercolor*{palette secondary}{fg=landgrantGrey,bg=chicagoMaroon}
+\setbeamercolor*{palette tertiary}{fg=landgrantGrey,bg=chicagoMaroon}
+\setbeamercolor*{palette quaternary}{fg=skipperSmoke,bg=chicagoMaroon}
+
+\setbeamercolor*{palette sidebar primary}{fg=landgrantGrey,bg=chicagoMaroon!80!orange}
+\setbeamercolor*{palette sidebar secondary}{fg=landgrantGrey,bg=chicagoMaroon!60!orange}
+\setbeamercolor*{palette sidebar tertiary}{fg=landgrantGrey,bg=chicagoMaroon!40!orange}
+\setbeamercolor*{palette sidebar quaternary}{fg=skipperSmoke}
+
+\setbeamercolor*{section in sidebar}{fg=chicagoMaroon,bg=orange}
+\setbeamercolor*{section in sidebar shaded}{fg=orange}
+\setbeamercolor*{subsection in sidebar}{fg=PylonPurple,bg=virginiaSunset}
+\setbeamercolor*{subsection in sidebar shaded}{fg=virginiaSunset}
+
+\setbeamercolor*{title}{fg=sustainableTeal,bg=skipperSmoke}
+\setbeamercolor*{titlelike}{fg=chicagoMaroon,bg=skipperSmoke}
+\setbeamercolor*{frametitle}{fg=sustainableTeal,bg=skipperSmoke}
+\setbeamercolor*{author}{fg=hokieStone}
+\setbeamercolor*{institute}{fg=hokieStone}
+\setbeamercolor*{date}{fg=landgrantGrey}
+
+\setbeamercolor*{separation line}{}
+\setbeamercolor*{fine separation line}{}
+
+\setbeamercolor*{block title}{fg=chicagoMaroon,bg=skipperSmoke}
+\setbeamercolor*{block title alerted}{fg=chicagoMaroon,bg=skipperSmoke}
+\setbeamercolor*{block title example}{fg=chicagoMaroon,bg=skipperSmoke}
+
+\setbeamercolor*{block body}{fg=hokieStone,bg=skipperSmoke}
+\setbeamercolor*{block body alerted}{fg=orange,bg=skipperSmoke}
+\setbeamercolor*{block body example}{fg=hokieStone,bg=skipperSmoke}
+
+\setbeamercolor{item projected}{fg=boundlessPink,bg=skipperSmoke}
+\setbeamercolor{navigation symbols}{fg=vibrantTurquoise,bg=sustainableTeal}
+
+\setbeamercolor{itemize item}{fg=pylonPurple}
+\setbeamercolor{itemize subitem}{fg=boundlessPink}
+\setbeamercolor{itemize subsubitem}{fg=virginiaSunset}
+
+\setbeamercolor{enumerate item}{fg=pylonPurple}
+\setbeamercolor{enumerate subitem}{fg=boundlessPink}
+\setbeamercolor{enumerate subsubitem}{fg=virginiaSunset}
+
+\setbeamercolor{verbatim}{fg=landgrantGrey}
+
+\setbeamercolor{section in toc}{fg=hokieStone}
+\setbeamercolor{subsection in toc}{fg=landgrantGrey}
+
+
+%\useinnertheme[shadow=false]{rounded}
+\useinnertheme{default}
+%\useoutertheme{default}
+%\useoutertheme{infolines}
+\useoutertheme[subsection=false]{miniframes}
+%\useoutertheme{split}
+
+% Manual template settings must appear here so that they don't get overrided by
+% the useinnertheme or useoutertheme calls.
+\setbeamertemplate{items}[triangle]
+\setbeamertemplate{itemize item}[triangle]
+\setbeamertemplate{itemize subitem}[triangle]
+\setbeamertemplate{itemize subsubitem}[triangle]
+
+\setbeamerfont{block title}{size={}}
+
+% This can be used for any appendices / publication list / bibliography.
+\setbeamerfont{bibliography}{size=\tiny}
+\logo{\includegraphics[height=14pt]{2017-logo-color.png}}
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+
+\mode
+<all>
